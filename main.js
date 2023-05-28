@@ -225,54 +225,66 @@ function mglt() {
   update_screen()
 }
 function keyuparr() {
-  tf = false
-  while (!tf) {
-    fy += 1
-    if (f_coll_g()) {
-      tf = true
+  if (running) {
+    tf = false
+    while (!tf) {
+      fy += 1
+      if (f_coll_g()) {
+        tf = true
+      }
     }
-  }
-  fy -= 1
-  add_f_to_g()
-  set_f()
-  update_screen()
-}
-function keydownarr() {
-  fy += 1
-  if (f_coll_g()) {
     fy -= 1
     add_f_to_g()
     set_f()
+    update_screen()
   }
-  update_screen()
+}
+function keydownarr() {
+  if (running) {
+    fy += 1
+    if (f_coll_g()) {
+      fy -= 1
+      add_f_to_g()
+      set_f()
+    }
+    update_screen()
+  }
 }
 function keyleftarr() {
-  fx -= 1
-  if (f_coll_g()) {
-    fx += 1
+  if (running) {
+    fx -= 1
+    if (f_coll_g()) {
+      fx += 1
+    }
+    update_screen()
   }
-  update_screen()
 }
 function keyrightarr() {
-  fx += 1
-  if (f_coll_g()) {
-    fx -= 1
+  if (running) {
+    fx += 1
+    if (f_coll_g()) {
+      fx -= 1
+    }
+    update_screen()
   }
-  update_screen()
 }
 function keyxrot() {
-  r_c()
-  if (f_coll_g()) {
-    r_cc()
+  if (running) {
+    r_c()
+    if (f_coll_g()) {
+      r_cc()
+    }
+    update_screen()
   }
-  update_screen()
 }
 function keyzrot() {
-  r_cc()
-  if (f_coll_g()) {
-    r_c()
+  if (running) {
+    r_cc()
+    if (f_coll_g()) {
+      r_c()
+    }
+    update_screen()
   }
-  update_screen()
 }
 window.onload = function(){
   set_f()
