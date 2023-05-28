@@ -12,8 +12,8 @@ canvas {
   color: white;
   border: 7px solid white;
   border-radius: 100%;
-  width: 70px;
-  height: 70px;
+  width: 140px;
+  height: 140px;
   font-size: xx-large;
   position: absolute;
 }
