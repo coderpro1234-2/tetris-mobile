@@ -1,0 +1,19 @@
+body {
+  text-align: center;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+}
+canvas {
+  border: 5px solid white;
+}
+.mobile-button {
+  background-color: gray;
+  color: white;
+  border: 7px solid white;
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  font-size: xx-large;
+  position: absolute;
+}

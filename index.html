@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tetris</title>
+    <link rel="icon" href="assets/images/tile4.png" id="icon">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="disable-select">
+    <div hidden>
+      <img id="tile0" src="assets/images/tile0.png">
+      <img id="tile1" src="assets/images/tile1.png">
+      <img id="tile2" src="assets/images/tile2.png">
+      <img id="tile3" src="assets/images/tile3.png">
+      <img id="tile4" src="assets/images/tile4.png">
+      <img id="tile5" src="assets/images/tile5.png">
+      <img id="tile6" src="assets/images/tile6.png">
+      <img id="tile7" src="assets/images/tile7.png">
+      <img id="tile8" src="assets/images/tile8.png">
+    </div>
+    <canvas width="200" height="400" id="game"></canvas>
+    <button class="mobile-button" style="bottom: 80px; right: 80px;" onclick="keyuparr()">^</button>
+    <button class="mobile-button" style="bottom: 0px; right: 80px;" onclick="keydownarr()">v</button>
+    <button class="mobile-button" style="bottom: 0px; right: 160px;" onclick="keyleftarr()"><</button>
+    <button class="mobile-button" style="bottom: 0px; right: 0px;" onclick="keyrightarr()">></button>
+    <button class="mobile-button" style="bottom: 0px; left: 0px;" onclick="keyzrot()">Z</button>
+    <button class="mobile-button" style="bottom: 0px; left: 80px;" onclick="keyxrot()">X</button>
+  </body>
+  <script src="main.js"></script>
+</html>
