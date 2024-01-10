@@ -1,5 +1,6 @@
 var canvas = document.getElementById("game")
 var ctx = canvas.getContext("2d")
+ctx.globalAlpha = 1
 var fx = 0
 var fy = 0
 var nxtt = 0
@@ -84,6 +85,22 @@ function draw_fblock() {
     a += 20
     i ++
   }
+}
+function draw_ghost() {
+  o_fy = fy
+  i = 0
+  while (i != -1) {
+    fy=fy+1
+    if (f_coll_g()){
+      fy=fy-1
+      i = -2
+    }
+    i++
+  }
+  ctx.globalAlpha = 0.5
+  draw_fblock()
+  ctx.globalAlpha = 1
+  fy = o_fy
 }
 function g_xy(x, y) {
   if (y > 19 || x < 0 || x > 9) {
@@ -213,6 +230,7 @@ function check_line() {
 function update_screen() {
   check_line()
   draw_gblocks()
+  draw_ghost()
   draw_fblock()
 }
 function mglt() {
